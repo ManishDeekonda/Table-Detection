@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package Project.protos;
+
+import "Project/protos/grid_anchor_generator.proto";
+
+
+// Configuration proto for the anchor generator to use in the object detection
+// pipeline. See core/anchor_generator.py for details.
+message AnchorGenerator {
+  oneof anchor_generator_oneof {
+    GridAnchorGenerator grid_anchor_generator = 1;
+  }
+}

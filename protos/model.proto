@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package Project.protos;
+
+import "Project/protos/faster_rcnn.proto";
+
+// Top level configuration for DetectionModels.
+message DetectionModel {
+  oneof model {
+    FasterRcnn faster_rcnn = 1;
+    
+  }
+}
